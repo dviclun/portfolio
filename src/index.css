@@ -1,0 +1,145 @@
+
+
+:root {
+
+  --mainBlack: #27272a;
+  --secondaryBlack: #18181b;
+  --mainWhite: #f5f5f5;
+  --mainPurple: #a21caf;
+  --lightPurple: #d946ef;
+
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  color-scheme: light dark;
+  color: var(--mainWhite);
+  background-color: var(--mainBlack);
+
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+.headerBg, .blur-bg {
+  background-color: #18181b61 !important;
+  backdrop-filter: blur(10px);
+}
+
+.profileImage {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  vertical-align: top;
+}
+
+.elevation-3 {
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.textGradient {
+  background: linear-gradient(90deg, rgba(162,28,175,1) 0%, rgba(245,245,245,1) 70%);
+  background-clip: text;
+  text-shadow: 0px 10px 20px rgba(0, 0, 0, 0.19), 0px 6px 6px rgba(0, 0, 0, 0.23);
+  color: transparent;
+}
+
+.text-shadow-3 {
+  text-shadow: 0px 10px 20px rgba(0, 0, 0, 0.19), 0px 6px 6px rgba(0, 0, 0, 0.23);
+
+}
+
+.purple-text {
+  font-weight: bold;
+  background: linear-gradient(90deg, var(--mainPurple) 0%, var(--lightPurple) 100%);
+  background-clip: text;
+  color:transparent;
+}
+
+.purple-text::after{
+  color: var(--mainWhite);
+}
+
+.headerIconLink{
+  text-decoration: none;
+  height: fit-content;
+  display: block;
+  height: 19px;
+  width: 19px;
+}
+
+.headerIconLink:hover{
+  transform: scale(110%);
+  transition: all ease-in 0.3s ;
+}
+
+.headerIcon {
+  width: 19px;
+  height: 19px;
+  filter: invert();
+}
+
+.headerLinkedinIcon {
+  filter: brightness(0%) invert();
+}
+
+.copiedText {
+  font-weight: bold;
+  background: linear-gradient(0deg, var(--lightPurple) 0%, var(--mainPurple) 100%);
+  background-clip: text;
+  color: transparent;
+  font-style: italic;
+}
+
+.highlighted-text {
+  color: var(--lightPurple);
+}
+
+.atmiraLink{
+  text-decoration: none;
+  color: #E81F76;
+  font-style: italic;
+}
+
+.emojiImage {
+  max-width: 150px;
+  filter: drop-shadow(0px 12px 24px rgba(0, 0, 0, 0.45)) drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.65));
+
+}
+
+.techImage {
+  width: 50%;
+  min-width: 80px;
+  filter: drop-shadow(0px 12px 14px rgba(0, 0, 0, 0.65)) drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.65));
+  height: 50%;
+}
+
+.secondaryTechImage {
+  width: 50%;
+  min-width: 30px;
+  filter: drop-shadow(0px 12px 14px rgba(0, 0, 0, 0.65)) drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.65));
+
+  height: 50%;
+}
+
+.tiltItem {
+  width: 100%;
+}
+
+.guyWorkingImage {
+  width: 100%;
+  max-width: 300px;
+  filter: drop-shadow(0px 12px 24px rgba(0, 0, 0, 0.45)) drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.65));
+}
+
+.certificateImage {
+  width: 100%;
+  max-width: 300px;
+  max-height: 270px;
+  filter: drop-shadow(0px 12px 24px rgba(0, 0, 0, 0.45)) drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.65));
+}
+
+.no-underline {
+  text-decoration: none;
+}
