@@ -31,7 +31,7 @@ export const StudiesSection = () => {
                                 <Grid item xs={12} sx={{marginTop: '1em'}}>
                                     <Typography sx={{textAlign: 'center', width: '100%' }}>React: De Cero a Experto (Hooks y MERN)</Typography>
                                     <Typography sx={{textAlign: 'center', width: '100%', fontStyle: 'italic', fontWeight: 'lighter', fontSize: '.8rem' }}>Udemy</Typography>
-                                    <Typography sx={{textAlign: 'center', width: '100%', fontStyle: 'italic', fontWeight: 'lighter', fontSize: '.8rem', marginBottom: '1em' }}><a className='highlighted-text no-underline'  href='https://www.ude.my/UC-cb0b5460-b289-4419-b392-edb5bd45fe57/'>Certificado</a></Typography>   
+                                    <Typography sx={{textAlign: 'center', width: '100%', fontStyle: 'italic', fontWeight: 'lighter', fontSize: '.8rem', marginBottom: '1em' }}><a className='highlighted-text no-underline' target='blank'  href='https://www.ude.my/UC-cb0b5460-b289-4419-b392-edb5bd45fe57/'>Certificado</a></Typography>   
                                     <Divider sx={{backgroundColor: theme.palette.mainWhite, opacity: '.3'}}/>
                                 </Grid>
                                 <Grid item xs={12} sx={{marginTop: '1em'}}>
