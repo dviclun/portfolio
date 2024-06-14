@@ -15,25 +15,25 @@ export const MainPage = () => {
 
   return (
     <>
-    <Grid container spacing={3} sx={{ marginTop: '2em', padding: '2em', paddingTop: '8em', paddingBottom: '4em'}}>
-        <ProfileSection/>
-    </Grid>
-    <Grid container className='elevation-3' justifyContent={'center'} spacing={3} sx={{ marginTop: '2em',marginBottom:'2em', padding: '2em', paddingTop:'4em', paddingBottom: '4em', backgroundColor: theme.palette.secondaryBlack}}>
-      <AboutSection/>
-    </Grid>
-    <Grid container justifyContent={'center'} spacing={3} sx={{ padding: '2em',paddingTop:'4em', paddingBottom: '4em',}}>
-      <TechnologiesSection/>
-    </Grid>
-    <Grid container className='elevation-3' justifyContent={'center'} spacing={3} sx={{ marginTop: '2em',marginBottom:'2em', padding: '2em', paddingTop:'4em', paddingBottom: '4em', backgroundColor: theme.palette.secondaryBlack}}>
-      <ExperienceSection/>
-    </Grid>
-    <Grid container justifyContent={'center'} spacing={3} sx={{ padding: '2em',paddingTop:'4em', paddingBottom: '4em',}}>
-      <StudiesSection/>
-    </Grid>
-    <Grid container className='elevation-3' justifyContent={'center'} spacing={3} sx={{ marginTop: '2em',marginBottom:'2em', padding: '2em', paddingTop:'4em', paddingBottom: '4em', backgroundColor: theme.palette.secondaryBlack}}>
-      <ProjectsSection/>
-    </Grid>
+      <Grid id='profile' container spacing={3} sx={{ marginTop: '2em', padding: '2em', paddingTop: '8em', paddingBottom: '4em' }}>
+        <ProfileSection />
+      </Grid>
+      <Grid id='about' container className='elevation-3' justifyContent={'center'} spacing={3} sx={{ marginTop: '2em', marginBottom: '2em', padding: '2em', paddingTop: '4em', paddingBottom: '4em', backgroundColor: theme.palette.secondaryBlack }}>
+        <AboutSection />
+      </Grid>
+      <Grid id='technologies' container justifyContent={'center'} spacing={3} sx={{ padding: '2em', paddingTop: '4em', paddingBottom: '4em', }}>
+        <TechnologiesSection />
+      </Grid>
+      <Grid id='experience' container className='elevation-3' justifyContent={'center'} spacing={3} sx={{ marginTop: '2em', marginBottom: '2em', padding: '2em', paddingTop: '4em', paddingBottom: '4em', backgroundColor: theme.palette.secondaryBlack }}>
+        <ExperienceSection />
+      </Grid>
+      <Grid id='studies' container justifyContent={'center'} spacing={3} sx={{ padding: '2em', paddingTop: '4em', paddingBottom: '4em', }}>
+        <StudiesSection />
+      </Grid>
+      <Grid id='projects' container className='elevation-3' justifyContent={'center'} spacing={3} sx={{ marginTop: '2em', marginBottom: '2em', padding: '2em', paddingTop: '4em', paddingBottom: '4em', backgroundColor: theme.palette.secondaryBlack }}>
+        <ProjectsSection />
+      </Grid>
     </>
-    
+
   )
 }

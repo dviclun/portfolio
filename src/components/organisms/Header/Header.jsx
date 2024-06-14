@@ -15,8 +15,9 @@ import { useState } from 'react';
 import { useTheme } from '@emotion/react';
 import SettingsIcon from '@mui/icons-material/Settings';
 import { Divider } from '@mui/material';
-
-import { Link, useNavigate } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
+import Curriculum from '../../../assets/documents/CV.pdf'
+import { useNavigate } from 'react-router-dom';
 
 export const Header = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -41,6 +42,16 @@ export const Header = () => {
     setAnchorElUser(null);
   };
 
+  const handleDownloadCV = () => {
+    const pdfUrl = Curriculum;
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.download = "Daniel_Vicent_CV.pdf"; // specify the filename
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
   return (
     <AppBar position="fixed" className='headerBg'>
       <Container maxWidth="xl">
@@ -48,8 +59,6 @@ export const Header = () => {
           <Typography
             variant="h6"
             noWrap
-            component="a"
-            href="/"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -59,7 +68,7 @@ export const Header = () => {
               textDecoration: 'none',
             }}
           >
-            &lt; DVL &#47; &gt;
+            <Link className='nonStyledLink' to='/#profile'>&lt; DVL &#47; &gt;</Link>
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -100,24 +109,32 @@ export const Header = () => {
             >
 
               <MenuItem onClick={handleCloseNavMenu} sx={{ ':active': { backgroundColor: theme.palette.mainBlack } }}>
-                <Typography textAlign="center" sx={{ width: '100%', color: theme.palette.mainWhite }}>Sobre mí</Typography>
+                <Typography textAlign="center" sx={{ width: '100%', color: theme.palette.mainWhite }}><Link className='nonStyledLink' to='/#about'>Sobre mí</Link></Typography>
               </MenuItem>
 
               <Divider sx={{ margin: '0 !important' }} />
 
               <MenuItem onClick={handleCloseNavMenu} sx={{ ':active': { backgroundColor: theme.palette.mainBlack } }}>
-                <Typography textAlign="center" sx={{ width: '100%', color: theme.palette.mainWhite }}>Proyectos</Typography>
+                <Typography textAlign="center" sx={{ width: '100%', color: theme.palette.mainWhite }}><Link className='nonStyledLink' to='/#technologies'>Tecnologías</Link></Typography>
               </MenuItem>
 
               <Divider sx={{ margin: '0 !important' }} />
 
               <MenuItem onClick={handleCloseNavMenu} sx={{ ':active': { backgroundColor: theme.palette.mainBlack } }}>
-                <Typography textAlign="center" sx={{ width: '100%', color: theme.palette.mainWhite }}>Contacto</Typography>
+                <Typography textAlign="center" sx={{ width: '100%', color: theme.palette.mainWhite }}><Link className='nonStyledLink' to='/#experience'>Experiencia</Link></Typography>
+              </MenuItem>
+
+              <MenuItem onClick={handleCloseNavMenu} sx={{ ':active': { backgroundColor: theme.palette.mainBlack } }}>
+                <Typography textAlign="center" sx={{ width: '100%', color: theme.palette.mainWhite }}><Link className='nonStyledLink' to='/#studies'>Formación</Link></Typography>
+              </MenuItem>
+
+              <MenuItem onClick={handleCloseNavMenu} sx={{ ':active': { backgroundColor: theme.palette.mainBlack } }}>
+                <Typography textAlign="center" sx={{ width: '100%', color: theme.palette.mainWhite }}><Link className='nonStyledLink' to='/#projects'>Proyectos</Link></Typography>
               </MenuItem>
 
               <Divider sx={{ margin: '0 !important' }} />
 
-              <MenuItem onClick={handleCloseNavMenu} sx={{ ':active': { backgroundColor: theme.palette.mainBlack } }}>
+              <MenuItem onClick={handleDownloadCV} sx={{ ':active': { backgroundColor: theme.palette.mainBlack } }}>
                 <Typography textAlign="center" sx={{ width: '100%', color: theme.palette.lightPurple }}>Descargar CV</Typography>
               </MenuItem>
 
@@ -126,8 +143,6 @@ export const Header = () => {
           <Typography
             variant="h5"
             noWrap
-            component="a"
-            href="/"
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
@@ -138,33 +153,42 @@ export const Header = () => {
               flexGrow: 1
             }}
           >
-            &lt; DVL &#47; &gt;
+            <Link className='nonStyledLink' to='/#profile'>&lt; DVL &#47; &gt;</Link>
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, gap: '15px' }}>
+          <Box sx={{ flexGrow: 1, justifyContent: 'end', display: { xs: 'none', md: 'flex' }, gap: '15px' }}>
 
             <Button
-              onClick={handleCloseNavMenu}
               sx={{ my: 2, color: theme.palette.mainWhite, display: 'block', ':active': { backgroundColor: theme.palette.mainBlack } }}
             >
-              Sobre mí
+              <Link className='nonStyledLink' to='/#about'>Sobre mí</Link>
             </Button>
 
             <Button
-              onClick={handleCloseNavMenu}
               sx={{ my: 2, color: theme.palette.mainWhite, display: 'block', ':active': { backgroundColor: theme.palette.mainBlack } }}
             >
-              Proyectos
+              <Link className='nonStyledLink' to='/#technologies'>Tecnologías</Link>
             </Button>
 
             <Button
-              onClick={handleCloseNavMenu}
               sx={{ my: 2, color: theme.palette.mainWhite, display: 'block', ':active': { backgroundColor: theme.palette.mainBlack } }}
             >
-              Contacto
+              <Link className='nonStyledLink' to='/#experience'>Experiencia</Link>
             </Button>
 
             <Button
-              onClick={handleCloseNavMenu}
+              sx={{ my: 2, color: theme.palette.mainWhite, display: 'block', ':active': { backgroundColor: theme.palette.mainBlack } }}
+            >
+              <Link className='nonStyledLink' to='/#studies'>Formación</Link>
+            </Button>
+
+            <Button
+              sx={{ my: 2, color: theme.palette.mainWhite, display: 'block', ':active': { backgroundColor: theme.palette.mainBlack } }}
+            >
+              <Link className='nonStyledLink' to='/#projects'>Proyectos</Link>
+            </Button>
+
+            <Button
+              onClick={handleDownloadCV}
               sx={{ my: 2, color: theme.palette.mainWhite, display: 'block', border: `1px solid ${theme.palette.lightPurple}`, ':active': { backgroundColor: theme.palette.mainBlack } }}
             >
               Descargar CV
@@ -172,13 +196,13 @@ export const Header = () => {
 
           </Box>
 
-          <Box sx={{ flexGrow: 0, display: 'flex', alignItems: 'center' }}>
+          {/* <Box sx={{ flexGrow: 0, display: 'flex', alignItems: 'center' }}>
             <Tooltip title="Ajustes">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0, marginLeft: '1em' }}>
                 <SettingsIcon sx={{ color: theme.palette.mainWhite }} />
               </IconButton>
             </Tooltip>
-            {/* <Menu
+             <Menu
                 sx={{ mt: '45px' }}
                 id="menu-appbar"
                 anchorEl={anchorElUser}
@@ -198,8 +222,8 @@ export const Header = () => {
                     <MenuItem onClick={handleCloseUserMenu}>
                     <Typography textAlign="center"></Typography>
                     </MenuItem>
-                </Menu> */}
-          </Box>
+                </Menu>
+          </Box> */}
         </Toolbar>
       </Container>
     </AppBar>

@@ -19,10 +19,10 @@ export const TechnologiesSection = () => {
                     <Divider sx={{ backgroundColor: theme.palette.mainPurple, height: '3px' }} />
                 </Grid>
             </Grid>
-            <Grid container justifyContent={'center'} item xs={12} sx={{marginTop: '2em'}}>
+            <Grid container justifyContent={'center'} item xs={12} sx={{ marginTop: '2em' }}>
                 {
-                    technologies.map(technology=> (
-                        <TechnologyCard key={technology.name} technology={technology}/>
+                    technologies.map(technology => (
+                        <TechnologyCard key={technology.name} technology={technology} />
                     ))
                 }
             </Grid>
