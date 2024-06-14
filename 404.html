@@ -1,6 +1,18 @@
-<script type="text/javascript">
-    (function() {
-      var redirect = '/' + window.location.pathname;
-      window.location.replace(redirect);
-    })();
-</script>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="0; url=/" />
+    <script>
+      (function() {
+        var currentUrl = window.location.href;
+        var baseUrl = "https://dviclun.github.io/portfolio";
+        if (!currentUrl.startsWith(baseUrl)) {
+          window.location.replace(baseUrl + window.location.pathname + window.location.search);
+        }
+      })();
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
