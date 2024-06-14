@@ -17,7 +17,7 @@ export const AppRouter = () => {
 
         <Route path='/' exact element={<MainPage />} />
         <Route path='/newconcept' element={<NewConcept />} />
-        <Route path='reactnasaapp' element={<ReactNasaApp />} />
+        <Route path='/reactnasaapp' element={<ReactNasaApp />} />
         <Route path='/*' element={<Navigate to='/' />} />
 
       </Routes>
