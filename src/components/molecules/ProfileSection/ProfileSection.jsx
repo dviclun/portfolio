@@ -48,8 +48,8 @@ export const ProfileSection = () => {
       </Grid>
       <Grid container item xs={12} md={8}>
         <Grid item xs={12} display={'flex'} flexDirection={'column'} justifyContent={'space-between'} alignItems={(isSmall) ? 'center' : 'start'} >
-          <Typography variant={(isSmall) ? 'h5' : 'h3'} className='textGradient' sx={{ fontWeight: 'bolder', fontStyle: 'italic', textAlign: (isSmall) ? 'center' : 'left' }}>DANIEL VICENT LUNA</Typography>
-          <Typography variant={(isSmall) ? 'body' : 'h4'} className='text-shadow-3' sx={{ fontStyle: 'italic', textAlign: (isSmall) ? 'center' : 'left', color: theme.palette.mainWhite }}>
+          <Typography variant={(isSmall) ? 'h5' : 'h3'} sx={{ fontWeight: 'bolder', fontStyle: 'italic', textAlign: (isSmall) ? 'center' : 'left' }}>DANIEL VICENT LUNA</Typography>
+          <Typography variant={(isSmall) ? 'body' : 'h4'} sx={{ fontStyle: 'italic', textAlign: (isSmall) ? 'center' : 'left', color: theme.palette.mainWhite }}>
             DESARROLLADOR&#32;
             <TypeAnimation
               className='purple-text'
@@ -66,7 +66,7 @@ export const ProfileSection = () => {
           </Typography>
           <Typography sx={{ display: 'flex', marginTop: '1em', textAlign: (isSmall) ? 'center' : 'left', color: theme.palette.mainWhite }}>
             <RoomIcon sx={{ marginRight: '.2em' }} />
-            Córdoba, España
+            Córdoba, 14720, España
           </Typography>
           <Typography sx={{ display: 'flex', marginTop: '1em', textAlign: (isSmall) ? 'center' : 'left', color: theme.palette.mainWhite }}>
             <MailOutlineIcon sx={{ marginRight: '.2em' }} />

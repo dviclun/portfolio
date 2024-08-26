@@ -58,9 +58,11 @@ body {
   color: transparent;
 }
 
+
 .purple-text::after {
   color: var(--mainWhite);
 }
+
 
 .headerIconLink {
   text-decoration: none;
@@ -169,7 +171,6 @@ body {
 
 .slideImage {
   width: 95%;
-  border-radius: 30px;
 }
 
 .embla__button {
@@ -194,4 +195,13 @@ body {
 .nonStyledLink {
   text-decoration: none;
   color: var(--mainWhite);
+}
+
+.seeMoreBtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--lightPurple);
+  padding: 0;
+  margin-left: 2px;
 }

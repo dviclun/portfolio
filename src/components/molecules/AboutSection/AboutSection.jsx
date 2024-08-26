@@ -21,7 +21,16 @@ export const AboutSection = () => {
                     </Grid>
                 </Grid>
                 <Grid item xs={12} md={6} sx={{ marginTop: '1em' }}>
-                    <Typography sx={{ color: theme.palette.mainWhite, textAlign: (isSmall) ? 'center' : 'left' }}>Apasionado del desarrollo de aplicaciones web, actualmente especializandome en <span className='highlighted-text'>React</span>, tecnología con la cual he estado trabajando durante mi periodo de formación en centros de trabajo en <a className='atmiraLink' href='https://www.atmira.com/' target='blank'>atmira</a>. Además intento superarme cada día aprendiendo nuevas tecnologías y herramientas.</Typography>
+                    <Typography sx={{ color: theme.palette.mainWhite, textAlign: (isSmall) ? 'center' : 'left' }}>Soy un apasionado del desarrollo de aplicaciones web, tengo
+                        experiencia en el uso de tecnologías como
+                        <span className='highlighted-text'> React, Node.js y MySQL</span>, adquirida a través de
+                        proyectos formativos y mi periodo siendo parte de <a className='atmiraLink' href='https://www.atmira.com/' target='blank'>atmira</a>, donde he aprendido y aplicado
+                        prácticas profesionales. Me especializo en la
+                        creación de interfaces intuitivas y funcionales,
+                        así como en el desarrollo de soluciones
+                        backend escalables. Como amante del mundo
+                        del desarrollo me mantengo siempre con ganas
+                        de mejorar y aprender. </Typography>
                 </Grid>
                 <Grid item display={'flex'} justifyContent={'center'} xs={12} md={6} sx={{ marginTop: (isSmall) ? '1em' : '0' }}>
                     <img src={HandWavingEmoji} alt='avatar' className='emojiImage' />
