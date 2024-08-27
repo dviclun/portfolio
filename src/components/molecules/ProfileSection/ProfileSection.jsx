@@ -27,7 +27,7 @@ export const ProfileSection = () => {
   }
   return (
     <>
-      <Grid container item xs={12} md={4} justifyContent={(isSmall) ? 'center' : 'end'}>
+      <Grid container className='profileContainer' item xs={12} md={4} justifyContent={(isSmall) ? 'center' : 'end'}>
         <Grid item className='elevation-3' sx={{ width: 'fit-content', backgroundColor: theme.palette.secondaryBlack, padding: '10px', borderRadius: '20px' }}>
           <Grid item xs={12}>
             <img className='profileImage' src={ProfileImage} />

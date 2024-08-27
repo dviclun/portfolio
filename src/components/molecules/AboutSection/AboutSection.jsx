@@ -11,7 +11,7 @@ export const AboutSection = () => {
 
     return (
         <>
-            <Grid container item sx={{ maxWidth: '1000px' }}>
+            <Grid container className='aboutContainer' item sx={{ maxWidth: '1000px' }}>
                 <Grid item xs={12}>
                     <Typography variant='h4' sx={{ textAlign: (isSmall) ? 'center' : 'left', fontWeight: 'bold', color: theme.palette.mainWhite }}>Sobre mí</Typography>
                 </Grid>

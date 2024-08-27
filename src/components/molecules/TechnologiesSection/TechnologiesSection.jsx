@@ -10,7 +10,7 @@ export const TechnologiesSection = () => {
 
     const isSmall = useMediaQuery(theme.breakpoints.down('md'));
     return (
-        <Grid container item sx={{ maxWidth: '1000px' }}>
+        <Grid container className='technologiesContainer' item sx={{ maxWidth: '1000px' }}>
             <Grid item xs={12}>
                 <Typography variant='h4' sx={{ textAlign: 'center', fontWeight: 'bold', color: theme.palette.mainWhite }}>Tecnologías</Typography>
             </Grid>

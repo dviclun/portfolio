@@ -205,3 +205,14 @@ body {
   padding: 0;
   margin-left: 2px;
 }
+
+.profileContainer::after {
+  content: "";
+  position: absolute;
+  background-color:var(--mainPurple);
+  width: 150px;
+  height: 150px;
+  top:0%;
+  left: 65%;
+  filter: blur(130px);
+}
