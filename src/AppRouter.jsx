@@ -4,6 +4,7 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import { MainPage } from './components/pages/MainPage/MainPage';
 import { NewConcept } from './components/molecules/NewConcept/NewConcept';
 import { ReactNasaApp } from './components/molecules/ReactNasaApp/ReactNasaApp';
+import { DevsQuiz } from './components/molecules/DevsQuiz/DevsQuiz';
 
 
 export const AppRouter = () => {
@@ -18,6 +19,7 @@ export const AppRouter = () => {
         <Route path='/' exact element={<MainPage />} />
         <Route path='/newconcept' element={<NewConcept />} />
         <Route path='/reactnasaapp' element={<ReactNasaApp />} />
+        <Route path='/devsquiz' element={<DevsQuiz />} />
         <Route path='/*' element={<Navigate to='/' />} />
 
       </Routes>
